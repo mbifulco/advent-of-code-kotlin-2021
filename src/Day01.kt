@@ -14,7 +14,14 @@ fun main() {
     }
 
     fun part2(input: List<String>): Int {
-        return input.size
+        var increases: Int = 0
+
+        for (i in 2..(input.size - 2)) {
+            val l: Int = input[i - 2].toInt() + input[i - 1].toInt() + input[i].toInt()
+            val r: Int = input[i - 1].toInt() + input[i].toInt() + input[i + 1].toInt()
+            if (r > l) increases += 1
+        }
+        return increases
     }
 
     // test if implementation meets criteria from the description, like:
