@@ -7,12 +7,10 @@ fun main() {
       var (instruction, d) = command.split(' ')
       val distance = d.toInt();
 
-      if (instruction.startsWith("forward")) {
-        horizontal += distance
-      } else if (instruction.startsWith("up")) {
-        depth -= distance
-      } else {
-        depth += distance
+      when(instruction) {
+        "forward" -> horizontal += distance
+        "up" -> depth -= distance
+        "down" -> depth += distance
       }
     }
     return depth * horizontal
