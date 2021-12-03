@@ -10,6 +10,10 @@ If you're stuck with Kotlin-specific questions or anything related to this templ
 - [Kotlin Slack][slack]
 - Template [issue tracker][issues]
 
+## To run the code for a given day's challenge
+
+1. make sure you've got the Kotlin CLI and it's dependencies installed
+2. from the root directory for this repo, run `kotlinc src/Day02.kt src/Utils.kt -include-runtime -d build/Day02.jar && java -jar build/Day02.jar` (this will compile Day02.kt and Utils.kt only, and pacakage them as a jar in build/Day02.jar, and then run that with a Java command)
 
 [^aoc]:
     [Advent of Code][aoc] – An annual event of Christmas-oriented programming challenges started December 2015.
